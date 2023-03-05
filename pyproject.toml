@@ -1,13 +1,14 @@
 [tool.poetry]
 name = "batch-image-processing"
-version = "0.1.0"
-description = ""
-authors = ["Akash Manujaya <akash@baypromo.net>"]
+version = "0.1.2"
+description = "A package to process all the images inside a folder using the Pillow package"
+authors = ["Akash Manujaya <akashmanujaya@gmail.com>"]
 readme = "README.md"
 packages = [{include = "batch_image_processing"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+pillow = "^9.0.0"
 
 
 [tool.poetry.group.dev.dependencies]

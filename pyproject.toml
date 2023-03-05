@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "batch-image-processing"
+version = "0.1.0"
+description = ""
+authors = ["Akash Manujaya <akash@baypromo.net>"]
+readme = "README.md"
+packages = [{include = "batch_image_processing"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

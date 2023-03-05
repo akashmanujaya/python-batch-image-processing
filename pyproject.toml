@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "batch-image-processing"
-version = "0.1.2"
+version = "0.1.4"
 description = "A package to process all the images inside a folder using the Pillow package"
 authors = ["Akash Manujaya <akashmanujaya@gmail.com>"]
 readme = "README.md"

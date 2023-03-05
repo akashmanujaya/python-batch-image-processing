@@ -144,7 +144,9 @@ class ImageProcessor:
             try:
                 with Image.open(path) as image:
                     rotated_image = image.rotate(degrees, expand=True)
-                    new_path = os.path.join(self.process_folder, os.path.basename(path))
+                    new_path = os.path.join(
+                        self.process_folder, os.path.relpath(path, self.image_folder)
+                    )
 
                     # making the directory inside the destination if not exits
                     _make_directory(new_path)
@@ -168,7 +170,9 @@ class ImageProcessor:
             try:
                 with Image.open(path) as image:
                     blurred_image = image.filter(ImageFilter.GaussianBlur(radius))
-                    new_path = os.path.join(self.process_folder, os.path.basename(path))
+                    new_path = os.path.join(
+                        self.process_folder, os.path.relpath(path, self.image_folder)
+                    )
 
                     # making the directory inside the destination if not exits
                     _make_directory(new_path)
@@ -192,7 +196,9 @@ class ImageProcessor:
             try:
                 with Image.open(path) as image:
                     grayscale_image = image.convert("L")
-                    new_path = os.path.join(self.process_folder, os.path.basename(path))
+                    new_path = os.path.join(
+                        self.process_folder, os.path.relpath(path, self.image_folder)
+                    )
 
                     # making the directory inside the destination if not exits
                     _make_directory(new_path)

@@ -21,6 +21,8 @@ class ImageProcessor:
         Returns a list of file paths to all image files in the given folder and its subfolders.
         """
         try:
+            if not os.path.exists(folder):
+                os.makedirs(folder)
             file_names = os.listdir(folder)
         except FileNotFoundError:
             raise Exception("Image folder does not exist.")
